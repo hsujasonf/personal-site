@@ -1,0 +1,136 @@
+{
+  "title": "Resume",
+  "clickToExpand": "Click to expand",
+  "contact": {
+    "email": "hsujasonf@gmail.com",
+    "phone": "415.745.0391",
+    "location": "San Francisco, CA",
+    "linkedin": "LinkedIn"
+  },
+  "summary": {
+    "title": "Professional Summary",
+    "content": "Highly skilled Software Engineer with 8+ years of experience in designing, developing, and implementing complex software solutions. Demonstrated expertise in full-stack development, system architecture, and team leadership. 5 years of full stack experience with JavaScript, React, Node, TypeScript and 2 years as a mobile engineer focusing on React Native. Proficient in Python and learning data science.",
+    "yearsExperience": "8+ years of experience",
+    "fullStackExperience": "5 years of full stack experience",
+    "mobileExperience": "2 years as a mobile engineer"
+  },
+  "skills": {
+    "title": "Technical Skills",
+    "coreSkills": {
+      "title": "8+ Years Experience",
+      "items": ["React", "Node.js", "TypeScript", "JavaScript", "Redux", "GraphQL", "HTML/CSS", "Git", "PostgreSQL", "TDD"]
+    },
+    "mobileSkills": {
+      "title": "2+ Years Experience",
+      "items": ["React Native", "Swift/iOS", "Android/Java"]
+    },
+    "additionalSkills": {
+      "title": "Additional Skills",
+      "items": ["Python", "Data Science", "Jest", "Enzyme"]
+    }
+  },
+  "experience": {
+    "title": "Work Experience",
+    "jobs": [
+      {
+        "id": "adobe",
+        "title": "Software Development Engineer",
+        "company": "Adobe",
+        "logo": "/adobe-logo.png",
+        "period": "August 2024 - Present",
+        "highlights": [
+          "Improved AMM Plans performance by up to 10× by refactoring critical navigation and rendering paths; reduced Instance Table → Compare load time from ~10s to ~1s, Instance Table → Insights from ~10s to ~2s, and Instance Table → Create from ~10s to near-instant.",
+          "Led end-to-end delivery of Plans Tracking by taking ownership midstream (~6 months into development), correcting misaligned requirements, and shipping a polished UX; added drag-and-drop, resizable widgets, and persisted metric/layout preferences.",
+          "Introduced scalable engineering patterns and new capabilities: drove adoption of a custom hook architecture used by multiple engineers to standardize data/state logic, and built an AI insights integration enabling users to generate contextual insights directly from graphs."
+        ],
+        "detailedInfo": {
+          "description": "Working on Adobe Marketing Mix Modeling (AMM) platform, focusing on performance optimization, new feature development, and engineering best practices.",
+          "technologies": ["React", "TypeScript", "Redux", "Node.js", "GraphQL", "OpenAI API"],
+          "achievements": [
+            "Achieved 10× performance improvement in critical user flows",
+            "Led cross-functional project delivery with product and design teams",
+            "Built AI-powered insights integration from scratch",
+            "Established custom hook patterns adopted across the engineering team",
+            "Implemented drag-and-drop and persistent state management for better UX"
+          ],
+          "image": "/adobe-app.png"
+        }
+      },
+      {
+        "id": "paypal",
+        "title": "Software Engineer",
+        "company": "PayPal",
+        "logo": "/paypal-logo.png",
+        "period": "October 2020 - April 2024",
+        "highlights": [
+          "Worked on removing SMS as a 2FA method, saving the company around $7 million. Worked with product and design to introduce new screens, nudging users to sign up for other methods as well as introducing push notifications as a login method.",
+          "Integrated Fido two-factor authentication for PayPal and all PayPal companies, allowing for more security during the login process. Lead frontend engineer for the project, engineered and implemented new 2FA registration screens.",
+          "Full stack front-end focused engineer on the security experiences team, focusing on two-factor authentication, authflow and security settings.",
+          "Led effort to re-skin authnodeweb repo, responsible for password recovery, two factor login, and step up flows during login."
+        ],
+        "detailedInfo": {
+          "description": "Worked in the Risk and Identity organizations, focusing on authentication, two-factor authentication, and security experiences across PayPal and all PayPal companies.",
+          "technologies": ["React", "Node.js", "TypeScript", "Redux", "Express", "PostgreSQL"],
+          "achievements": [
+            "Saved company $7 million by removing SMS as 2FA method",
+            "Lead frontend engineer for Fido 2FA integration",
+            "Built push notification authentication system",
+            "Re-skinned authentication flows across multiple products",
+            "Improved security while enhancing user experience"
+          ],
+          "image": "/paypal-app.png"
+        }
+      },
+      {
+        "id": "easypost",
+        "title": "Software Engineer - Mobile, Frontend",
+        "company": "EasyPost",
+        "logo": "/easypost-logo.png",
+        "period": "October 2019 - April 2020",
+        "highlights": [
+          "Mobile Developer focusing on developing and maintaining HOTH, an app for warehouse workers to process and ship orders on the fulfillment side of the business.",
+          "Engineered and implemented a React Native components library to replace the Native Base components library for the warehouse fulfillment app."
+        ],
+        "detailedInfo": {
+          "description": "Developed and maintained HOTH, a mobile application for warehouse workers to efficiently process and ship orders in the fulfillment operations.",
+          "technologies": ["React Native", "JavaScript", "Redux", "Native Base", "iOS", "Android"],
+          "achievements": [
+            "Built custom React Native component library from scratch",
+            "Replaced third-party UI library with custom solution",
+            "Improved app performance and customization capabilities",
+            "Enhanced warehouse worker productivity through better UX"
+          ],
+          "image": "/easypost-app.png"
+        }
+      },
+      {
+        "id": "avant",
+        "title": "Mobile Engineer",
+        "company": "Avant",
+        "logo": "/avant-logo.png",
+        "period": "June 2018 - October 2019",
+        "highlights": [
+          "Hired as the first React Native engineer and developed a personal loan app from scratch in React Native that allows users to pay off their loans and view their loan information for Android and iOS."
+        ],
+        "detailedInfo": {
+          "description": "First React Native engineer at Avant, responsible for building a personal loan mobile application from the ground up for both iOS and Android platforms.",
+          "technologies": ["React Native", "JavaScript", "Redux", "iOS", "Android", "REST APIs"],
+          "achievements": [
+            "Built entire mobile app from scratch as sole React Native engineer",
+            "Delivered cross-platform solution for iOS and Android",
+            "Implemented loan payment and management features",
+            "Established mobile development practices and architecture",
+            "Launched app successfully to production for thousands of users"
+          ],
+          "image": "/avant-app.png"
+        }
+      }
+    ]
+  },
+  "modal": {
+    "overview": "Overview",
+    "technologies": "Technologies Used",
+    "achievements": "Key Achievements",
+    "responsibilities": "Responsibilities & Impact"
+  }
+}

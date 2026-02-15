@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import { useResumeTranslations } from '@/lib/i18n';
 import { Experience } from './types';
+import styles from '../styles/shared.module.css';
 
 interface ExperienceModalProps {
   experience: Experience;
@@ -11,17 +12,11 @@ const ExperienceModal = ({ experience, onClose }: ExperienceModalProps) => {
   const t = useResumeTranslations();
 
   return (
-    <div
-      className="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 flex items-center justify-center p-4 animate-fade-in"
-      onClick={onClose}
-    >
-      <div
-        className="bg-white dark:bg-black border-2 border-black dark:border-white rounded-2xl max-w-5xl w-full max-h-[90vh] overflow-y-auto shadow-2xl animate-scale-in"
-        onClick={(e) => e.stopPropagation()}
-      >
+    <div className={styles.modalOverlay} onClick={onClose}>
+      <div className={styles.modalContent} onClick={(e) => e.stopPropagation()}>
         {/* Modal Header */}
-        <div className="sticky top-0 bg-white dark:bg-black border-b-2 border-zinc-200 dark:border-zinc-800 p-6 flex items-start gap-4 z-10">
-          <div className="flex-shrink-0 w-20 h-20 bg-white dark:bg-zinc-900 rounded-lg border-2 border-zinc-200 dark:border-zinc-800 p-3 flex items-center justify-center">
+        <div className={styles.modalHeader}>
+          <div className={styles.experienceLogoLarge}>
             <Image
               src={experience.logo}
               alt={`${experience.company} logo`}
@@ -41,10 +36,7 @@ const ExperienceModal = ({ experience, onClose }: ExperienceModalProps) => {
               {experience.period}
             </p>
           </div>
-          <button
-            onClick={onClose}
-            className="flex-shrink-0 w-10 h-10 rounded-full border-2 border-zinc-200 dark:border-zinc-800 hover:border-black dark:hover:border-teal-400 flex items-center justify-center transition-colors"
-          >
+          <button onClick={onClose} className={styles.modalCloseButton}>
             <svg
               className="w-6 h-6"
               fill="none"

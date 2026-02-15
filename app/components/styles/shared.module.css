@@ -1,0 +1,100 @@
+@reference "../../globals.css";
+
+/* Shared component styles */
+
+/* Headers with teal outline */
+.headerWithOutline {
+  -webkit-text-stroke: 1px rgb(45, 212, 191);
+}
+
+/* Cards */
+.card {
+  @apply bg-white dark:bg-black border-2 border-zinc-200 dark:border-zinc-800 rounded-xl;
+}
+
+.cardHoverable {
+  @apply bg-white dark:bg-black border-2 border-zinc-200 dark:border-zinc-800 rounded-xl;
+  @apply hover:border-black dark:hover:border-teal-400 transition-all duration-300 hover:shadow-lg cursor-pointer;
+}
+
+/* Badges */
+.badge {
+  @apply flex items-center gap-2 px-4 py-2 bg-white dark:bg-black border-2 border-zinc-200 dark:border-zinc-800 rounded-lg;
+}
+
+.badgeClickable {
+  @apply flex items-center gap-2 px-4 py-2 bg-white dark:bg-black border-2 border-zinc-200 dark:border-zinc-800 rounded-lg;
+  @apply text-zinc-700 dark:text-zinc-300 hover:border-black dark:hover:border-teal-400;
+  @apply hover:text-black dark:hover:text-teal-400 transition-all;
+}
+
+.badgeStatic {
+  @apply flex items-center gap-2 px-4 py-2 bg-white dark:bg-black border-2 border-zinc-200 dark:border-zinc-800 rounded-lg;
+  @apply text-zinc-500 dark:text-zinc-500;
+}
+
+/* Buttons */
+.buttonPrimary {
+  @apply px-8 py-3 bg-black dark:bg-white text-white dark:text-black rounded-full font-medium;
+  @apply hover:bg-zinc-800 dark:hover:bg-zinc-200 transition-colors;
+}
+
+.buttonSecondary {
+  @apply px-8 py-3 border-2 border-black dark:border-white text-black dark:text-white rounded-full font-medium;
+  @apply hover:bg-black hover:text-white dark:hover:bg-teal-400 dark:hover:text-black transition-colors;
+}
+
+/* Skill tags */
+.skillTag {
+  @apply px-3 py-1.5 rounded-md text-xs font-medium;
+}
+
+.skillTagPrimary {
+  @apply px-3 py-1.5 bg-black dark:bg-white text-white dark:text-black rounded-md text-xs font-medium;
+}
+
+.skillTagSecondary {
+  @apply px-3 py-1.5 bg-zinc-700 dark:bg-zinc-300 text-white dark:text-black rounded-md text-xs font-medium;
+}
+
+.skillTagOutline {
+  @apply px-3 py-1.5 border-2 border-zinc-300 dark:border-zinc-700 text-zinc-700 dark:text-zinc-300 rounded-md text-xs font-medium;
+}
+
+/* Modal styles */
+.modalOverlay {
+  @apply fixed inset-0 bg-black/60 backdrop-blur-sm z-50 flex items-center justify-center p-4;
+  animation: fade-in 0.3s ease-out;
+}
+
+.modalContent {
+  @apply bg-white dark:bg-black border-2 border-black dark:border-white rounded-2xl;
+  @apply max-w-5xl w-full max-h-[90vh] overflow-y-auto shadow-2xl;
+  animation: scale-in 0.3s ease-out;
+}
+
+.modalHeader {
+  @apply sticky top-0 bg-white dark:bg-black border-b-2 border-zinc-200 dark:border-zinc-800;
+  @apply p-6 flex items-start gap-4 z-10;
+}
+
+.modalCloseButton {
+  @apply flex-shrink-0 w-10 h-10 rounded-full border-2 border-zinc-200 dark:border-zinc-800;
+  @apply hover:border-black dark:hover:border-teal-400 flex items-center justify-center transition-colors;
+}
+
+/* Experience card elements */
+.experienceLogo {
+  @apply flex-shrink-0 w-16 h-16 bg-white dark:bg-zinc-900 rounded-lg;
+  @apply border-2 border-zinc-200 dark:border-zinc-800 p-2 flex items-center justify-center;
+}
+
+.experienceLogoLarge {
+  @apply flex-shrink-0 w-20 h-20 bg-white dark:bg-zinc-900 rounded-lg;
+  @apply border-2 border-zinc-200 dark:border-zinc-800 p-3 flex items-center justify-center;
+}
+
+/* Chevron icon */
+.chevronIcon {
+  @apply text-zinc-400 dark:text-zinc-600 group-hover:text-black dark:group-hover:text-teal-400 transition-colors;
+}

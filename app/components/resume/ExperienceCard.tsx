@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import { Experience } from './types';
+import styles from '../styles/shared.module.css';
 
 interface ExperienceCardProps {
   experience: Experience;
@@ -8,12 +9,9 @@ interface ExperienceCardProps {
 
 const ExperienceCard = ({ experience, onClick }: ExperienceCardProps) => {
   return (
-    <div
-      onClick={onClick}
-      className="group bg-white dark:bg-black border-2 border-zinc-200 dark:border-zinc-800 rounded-xl p-6 hover:border-black dark:hover:border-teal-400 transition-all duration-300 hover:shadow-lg cursor-pointer"
-    >
+    <div onClick={onClick} className={`group ${styles.cardHoverable} p-6`}>
       <div className="flex items-start gap-4 mb-4">
-        <div className="flex-shrink-0 w-16 h-16 bg-white dark:bg-zinc-900 rounded-lg border-2 border-zinc-200 dark:border-zinc-800 p-2 flex items-center justify-center">
+        <div className={styles.experienceLogo}>
           <Image
             src={experience.logo}
             alt={`${experience.company} logo`}
@@ -33,7 +31,7 @@ const ExperienceCard = ({ experience, onClick }: ExperienceCardProps) => {
             {experience.period}
           </p>
         </div>
-        <div className="text-zinc-400 dark:text-zinc-600 group-hover:text-black dark:group-hover:text-teal-400 transition-colors">
+        <div className={styles.chevronIcon}>
           <svg
             className="w-6 h-6"
             fill="none"

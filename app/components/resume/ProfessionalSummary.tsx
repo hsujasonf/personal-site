@@ -1,10 +1,11 @@
 import { useResumeTranslations } from '@/lib/i18n';
+import styles from '../styles/shared.module.css';
 
 const ProfessionalSummary = () => {
   const t = useResumeTranslations();
 
   return (
-    <div className="mb-12 p-8 bg-gradient-to-br from-zinc-50 to-zinc-100 dark:from-zinc-900 dark:to-black rounded-xl border-2 border-zinc-200 dark:border-zinc-800 shadow-sm">
+    <div className={`mb-12 p-8 bg-gradient-to-br from-zinc-50 to-zinc-100 dark:from-zinc-900 dark:to-black rounded-xl shadow-sm ${styles.card}`}>
       <h3 className="text-2xl font-bold text-black dark:text-white mb-4 flex items-center gap-2">
         <span className="text-2xl">💼</span>
         {t.summary.title}

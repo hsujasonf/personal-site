@@ -8,6 +8,7 @@ This project uses a simple localization system to organize content separately fr
 messages/
   en/
     resume.json       # Resume section content
+    about.json        # About section content
 lib/
   i18n.ts            # Translation utilities
 ```
@@ -21,15 +22,17 @@ lib/
 ## Usage Example
 
 ```tsx
-import { useResumeTranslations } from '@/lib/i18n';
+import { useResumeTranslations, useAboutTranslations } from '@/lib/i18n';
 
 export default function MyComponent() {
-  const t = useResumeTranslations();
+  const resumeT = useResumeTranslations();
+  const aboutT = useAboutTranslations();
   
   return (
     <div>
-      <h1>{t.title}</h1>
-      <p>{t.summary.content}</p>
+      <h1>{resumeT.title}</h1>
+      <p>{resumeT.summary.content}</p>
+      <p>{aboutT.paragraphs[0]}</p>
     </div>
   );
 }
@@ -50,6 +53,21 @@ Edit `messages/en/resume.json` to add or modify content:
 }
 ```
 
+### For About Section
+
+Edit `messages/en/about.json` to update the about page content:
+
+```json
+{
+  "title": "About Me",
+  "paragraphs": [
+    "First paragraph...",
+    "Second paragraph...",
+    "Third paragraph..."
+  ]
+}
+```
+
 ### For New Sections
 
 1. Create a new JSON file: `messages/en/your-section.json`
@@ -57,9 +75,11 @@ Edit `messages/en/resume.json` to add or modify content:
    ```ts
    import yourSectionMessages from '@/messages/en/your-section.json';
    
-   export function useYourSectionTranslations() {
+   export const useYourSectionTranslations = () => {
      return yourSectionMessages;
-   }
+   };
+   
+   export type YourSectionMessages = typeof yourSectionMessages;
    ```
 3. Use in your component:
    ```tsx

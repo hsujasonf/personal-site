@@ -9,14 +9,14 @@ const TechnicalSkills = () => {
 
   return (
     <div className="mb-12">
-      <h3 className="text-2xl font-bold text-black dark:text-white mb-6">
+      <h3 className="text-2xl font-bold text-foreground mb-6">
         {t.skills.title}
       </h3>
 
       <div className="grid md:grid-cols-3 gap-6">
         {/* Core Skills */}
         <div className={`${styles.card} p-6`}>
-          <h4 className="text-xs font-bold tracking-wider text-zinc-600 dark:text-zinc-400 mb-4 uppercase">
+          <h4 className="text-xs font-bold tracking-wider text-zinc-500 mb-4 uppercase">
             {t.skills.coreSkills.title}
           </h4>
           <div className="flex flex-wrap gap-2">
@@ -30,7 +30,7 @@ const TechnicalSkills = () => {
 
         {/* Mobile Skills */}
         <div className={`${styles.card} p-6`}>
-          <h4 className="text-xs font-bold tracking-wider text-zinc-600 dark:text-zinc-400 mb-4 uppercase">
+          <h4 className="text-xs font-bold tracking-wider text-zinc-500 mb-4 uppercase">
             {t.skills.mobileSkills.title}
           </h4>
           <div className="flex flex-wrap gap-2">
@@ -44,7 +44,7 @@ const TechnicalSkills = () => {
 
         {/* Additional Skills */}
         <div className={`${styles.card} p-6`}>
-          <h4 className="text-xs font-bold tracking-wider text-zinc-600 dark:text-zinc-400 mb-4 uppercase">
+          <h4 className="text-xs font-bold tracking-wider text-zinc-500 mb-4 uppercase">
             {t.skills.additionalSkills.title}
           </h4>
           <div className="flex flex-wrap gap-2">

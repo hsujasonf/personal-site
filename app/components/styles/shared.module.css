@@ -1,100 +1,174 @@
 @reference "../../globals.css";
 
-/* Shared component styles */
+/* Shared component styles — Dark & Sleek theme */
 
-/* Headers with teal outline */
+/* Headers with cyan glow outline */
 .headerWithOutline {
-  -webkit-text-stroke: 1px rgb(45, 212, 191);
+  -webkit-text-stroke: 1px var(--accent);
+  text-shadow: 0 0 30px var(--accent-dim);
 }
 
-/* Cards */
+/* Glass cards */
 .card {
-  @apply bg-white dark:bg-black border-2 border-zinc-200 dark:border-zinc-800 rounded-xl;
+  @apply rounded-xl;
+  background: var(--surface);
+  border: 1px solid var(--surface-border);
+  backdrop-filter: blur(12px);
 }
 
 .cardHoverable {
-  @apply bg-white dark:bg-black border-2 border-zinc-200 dark:border-zinc-800 rounded-xl;
-  @apply hover:border-black dark:hover:border-teal-400 transition-all duration-300 hover:shadow-lg cursor-pointer;
+  @apply rounded-xl cursor-pointer;
+  background: var(--surface);
+  border: 1px solid var(--surface-border);
+  backdrop-filter: blur(12px);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.cardHoverable:hover {
+  border-color: var(--surface-border-hover);
+  box-shadow: var(--accent-glow);
+  transform: translateY(-2px);
 }
 
 /* Badges */
 .badge {
-  @apply flex items-center gap-2 px-4 py-2 bg-white dark:bg-black border-2 border-zinc-200 dark:border-zinc-800 rounded-lg;
+  @apply flex items-center gap-2 px-4 py-2 rounded-lg;
+  background: var(--surface);
+  border: 1px solid var(--surface-border);
 }
 
 .badgeClickable {
-  @apply flex items-center gap-2 px-4 py-2 bg-white dark:bg-black border-2 border-zinc-200 dark:border-zinc-800 rounded-lg;
-  @apply text-zinc-700 dark:text-zinc-300 hover:border-black dark:hover:border-teal-400;
-  @apply hover:text-black dark:hover:text-teal-400 transition-all;
+  @apply flex items-center gap-2 px-4 py-2 rounded-lg;
+  background: var(--surface);
+  border: 1px solid var(--surface-border);
+  color: var(--foreground);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
+}
+
+.badgeClickable:hover {
+  border-color: var(--surface-border-hover);
+  box-shadow: 0 0 12px rgba(34, 211, 238, 0.25);
+  color: var(--accent);
 }
 
 .badgeStatic {
-  @apply flex items-center gap-2 px-4 py-2 bg-white dark:bg-black border-2 border-zinc-200 dark:border-zinc-800 rounded-lg;
-  @apply text-zinc-500 dark:text-zinc-500;
+  @apply flex items-center gap-2 px-4 py-2 rounded-lg;
+  background: var(--surface);
+  border: 1px solid var(--surface-border);
+  color: rgb(113, 113, 122); /* zinc-500 */
 }
 
 /* Buttons */
 .buttonPrimary {
-  @apply px-8 py-3 bg-black dark:bg-white text-white dark:text-black rounded-full font-medium;
-  @apply hover:bg-zinc-800 dark:hover:bg-zinc-200 transition-colors;
+  @apply px-8 py-3 rounded-full font-medium;
+  background: var(--accent);
+  color: #050505;
+  box-shadow: 0 0 20px rgba(34, 211, 238, 0.3);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.buttonPrimary:hover {
+  box-shadow: 0 0 30px rgba(34, 211, 238, 0.5), 0 0 60px rgba(34, 211, 238, 0.2);
+  transform: translateY(-1px);
 }
 
 .buttonSecondary {
-  @apply px-8 py-3 border-2 border-black dark:border-white text-black dark:text-white rounded-full font-medium;
-  @apply hover:bg-black hover:text-white dark:hover:bg-teal-400 dark:hover:text-black transition-colors;
+  @apply px-8 py-3 rounded-full font-medium;
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  background: transparent;
+  transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
 }
 
-/* Skill tags */
+.buttonSecondary:hover {
+  background: var(--accent-dim);
+  box-shadow: 0 0 20px rgba(34, 211, 238, 0.2);
+  transform: translateY(-1px);
+}
+
+/* Skill tags — terminal/code aesthetic */
 .skillTag {
-  @apply px-3 py-1.5 rounded-md text-xs font-medium;
+  @apply px-3 py-1.5 rounded-md text-xs;
+  font-family: var(--font-geist-mono), monospace;
 }
 
 .skillTagPrimary {
-  @apply px-3 py-1.5 bg-black dark:bg-white text-white dark:text-black rounded-md text-xs font-medium;
+  @apply px-3 py-1.5 rounded-md text-xs font-semibold;
+  font-family: var(--font-geist-mono), monospace;
+  background: var(--accent);
+  color: #050505;
 }
 
 .skillTagSecondary {
-  @apply px-3 py-1.5 bg-zinc-700 dark:bg-zinc-300 text-white dark:text-black rounded-md text-xs font-medium;
+  @apply px-3 py-1.5 rounded-md text-xs font-medium;
+  font-family: var(--font-geist-mono), monospace;
+  background: rgba(34, 211, 238, 0.1);
+  color: var(--accent);
+  border: 1px solid rgba(34, 211, 238, 0.2);
 }
 
 .skillTagOutline {
-  @apply px-3 py-1.5 border-2 border-zinc-300 dark:border-zinc-700 text-zinc-700 dark:text-zinc-300 rounded-md text-xs font-medium;
+  @apply px-3 py-1.5 rounded-md text-xs font-medium;
+  font-family: var(--font-geist-mono), monospace;
+  border: 1px solid var(--surface-border);
+  color: rgb(161, 161, 170); /* zinc-400 */
 }
 
 /* Modal styles */
 .modalOverlay {
-  @apply fixed inset-0 bg-black/60 backdrop-blur-sm z-50 flex items-center justify-center p-4;
+  @apply fixed inset-0 z-50 flex items-center justify-center p-4;
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(8px);
   animation: fade-in 0.3s ease-out;
 }
 
 .modalContent {
-  @apply bg-white dark:bg-black border-2 border-black dark:border-white rounded-2xl;
-  @apply max-w-5xl w-full max-h-[90vh] overflow-y-auto shadow-2xl;
+  @apply max-w-5xl w-full max-h-[90vh] overflow-y-auto rounded-2xl;
+  background: #0a0a0a;
+  border: 1px solid var(--surface-border-hover);
+  box-shadow: var(--accent-glow-lg);
   animation: scale-in 0.3s ease-out;
 }
 
 .modalHeader {
-  @apply sticky top-0 bg-white dark:bg-black border-b-2 border-zinc-200 dark:border-zinc-800;
-  @apply p-6 flex items-start gap-4 z-10;
+  @apply sticky top-0 p-6 flex items-start gap-4 z-10;
+  background: #0a0a0a;
+  border-bottom: 1px solid var(--surface-border);
 }
 
 .modalCloseButton {
-  @apply flex-shrink-0 w-10 h-10 rounded-full border-2 border-zinc-200 dark:border-zinc-800;
-  @apply hover:border-black dark:hover:border-teal-400 flex items-center justify-center transition-colors;
+  @apply flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center;
+  border: 1px solid var(--surface-border);
+  color: rgb(161, 161, 170); /* zinc-400 */
+  transition: border-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.modalCloseButton:hover {
+  border-color: var(--surface-border-hover);
+  color: var(--accent);
+  box-shadow: 0 0 12px rgba(34, 211, 238, 0.2);
 }
 
 /* Experience card elements */
 .experienceLogo {
-  @apply flex-shrink-0 w-16 h-16 bg-white dark:bg-zinc-900 rounded-lg;
-  @apply border-2 border-zinc-200 dark:border-zinc-800 p-2 flex items-center justify-center;
+  @apply flex-shrink-0 w-16 h-16 rounded-lg p-2 flex items-center justify-center;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--surface-border);
 }
 
 .experienceLogoLarge {
-  @apply flex-shrink-0 w-20 h-20 bg-white dark:bg-zinc-900 rounded-lg;
-  @apply border-2 border-zinc-200 dark:border-zinc-800 p-3 flex items-center justify-center;
+  @apply flex-shrink-0 w-20 h-20 rounded-lg p-3 flex items-center justify-center;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--surface-border);
 }
 
 /* Chevron icon */
 .chevronIcon {
-  @apply text-zinc-400 dark:text-zinc-600 group-hover:text-black dark:group-hover:text-teal-400 transition-colors;
+  color: rgb(82, 82, 91); /* zinc-600 */
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.cardHoverable:hover .chevronIcon {
+  color: var(--accent);
+  transform: translateX(2px);
 }

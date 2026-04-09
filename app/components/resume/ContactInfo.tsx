@@ -6,7 +6,7 @@ const ContactInfo = () => {
 
   return (
     <div className="mb-12">
-      <h2 className={`text-4xl md:text-6xl font-bold text-black dark:text-white mb-6 ${styles.headerWithOutline}`}>
+      <h2 className={`text-4xl md:text-6xl font-bold text-foreground mb-6 ${styles.headerWithOutline}`}>
         {t.title}
       </h2>
       <div className="flex flex-wrap gap-4 text-sm">

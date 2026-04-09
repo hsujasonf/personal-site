@@ -26,13 +26,13 @@ const ExperienceModal = ({ experience, onClose }: ExperienceModalProps) => {
             />
           </div>
           <div className="flex-1">
-            <h3 className="text-2xl md:text-3xl font-bold text-black dark:text-white mb-2">
+            <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-2">
               {experience.title}
             </h3>
-            <p className="text-xl font-semibold text-zinc-700 dark:text-zinc-300">
+            <p className="text-xl font-semibold text-zinc-400">
               {experience.company}
             </p>
-            <p className="text-sm text-zinc-500 dark:text-zinc-500 mt-1">
+            <p className="text-sm text-zinc-600 mt-1">
               {experience.period}
             </p>
           </div>
@@ -59,17 +59,17 @@ const ExperienceModal = ({ experience, onClose }: ExperienceModalProps) => {
             <>
               {/* Overview */}
               <div className="mb-8">
-                <h4 className="text-lg font-bold text-black dark:text-white mb-3">
+                <h4 className="text-lg font-bold text-foreground mb-3">
                   {t.modal.overview}
                 </h4>
-                <p className="text-zinc-700 dark:text-zinc-300 leading-relaxed text-lg">
+                <p className="text-zinc-400 leading-relaxed text-lg">
                   {experience.detailedInfo.description}
                 </p>
               </div>
 
               {/* Image (if available) */}
               {experience.detailedInfo.image && (
-                <div className="mb-8 rounded-xl overflow-hidden border-2 border-zinc-200 dark:border-zinc-800">
+                <div className="mb-8 rounded-xl overflow-hidden border border-white/[0.08]">
                   <Image
                     src={experience.detailedInfo.image}
                     alt={`${experience.company} app`}
@@ -82,14 +82,14 @@ const ExperienceModal = ({ experience, onClose }: ExperienceModalProps) => {
 
               {/* Technologies */}
               <div className="mb-8">
-                <h4 className="text-lg font-bold text-black dark:text-white mb-3">
+                <h4 className="text-lg font-bold text-foreground mb-3">
                   {t.modal.technologies}
                 </h4>
                 <div className="flex flex-wrap gap-2">
                   {experience.detailedInfo.technologies.map((tech, index) => (
                     <span
                       key={index}
-                      className="px-4 py-2 bg-black dark:bg-white text-white dark:text-black rounded-lg text-sm font-medium"
+                      className={styles.skillTagSecondary}
                     >
                       {tech}
                     </span>
@@ -99,16 +99,16 @@ const ExperienceModal = ({ experience, onClose }: ExperienceModalProps) => {
 
               {/* Key Achievements */}
               <div className="mb-8">
-                <h4 className="text-lg font-bold text-black dark:text-white mb-3">
+                <h4 className="text-lg font-bold text-foreground mb-3">
                   {t.modal.achievements}
                 </h4>
                 <ul className="space-y-3">
                   {experience.detailedInfo.achievements.map((achievement, index) => (
                     <li
                       key={index}
-                      className="text-zinc-700 dark:text-zinc-300 leading-relaxed flex"
+                      className="text-zinc-400 leading-relaxed flex"
                     >
-                      <span className="mr-3 text-black dark:text-white font-bold">✓</span>
+                      <span className="mr-3 text-accent font-bold">✓</span>
                       <span>{achievement}</span>
                     </li>
                   ))}
@@ -119,16 +119,16 @@ const ExperienceModal = ({ experience, onClose }: ExperienceModalProps) => {
 
           {/* All Highlights */}
           <div>
-            <h4 className="text-lg font-bold text-black dark:text-white mb-3">
+            <h4 className="text-lg font-bold text-foreground mb-3">
               {t.modal.responsibilities}
             </h4>
             <ul className="space-y-3">
               {experience.highlights.map((highlight, index) => (
                 <li
                   key={index}
-                  className="text-zinc-700 dark:text-zinc-300 leading-relaxed flex"
+                  className="text-zinc-400 leading-relaxed flex"
                 >
-                  <span className="mr-3 text-black dark:text-white font-bold">•</span>
+                  <span className="mr-3 text-foreground font-bold">•</span>
                   <span>{highlight}</span>
                 </li>
               ))}

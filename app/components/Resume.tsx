@@ -7,7 +7,7 @@ const Resume = () => {
   return (
     <section
       id="resume"
-      className="min-h-screen flex items-center px-6 py-20 bg-zinc-50 dark:bg-zinc-900"
+      className="min-h-screen flex items-center px-6 py-20 border-t border-white/[0.06]"
     >
       <div className="max-w-5xl mx-auto w-full">
         <ContactInfo />

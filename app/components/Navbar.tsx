@@ -19,7 +19,7 @@ const Navbar = () => {
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? 'bg-white/80 dark:bg-black/80 backdrop-blur-md shadow-sm'
+          ? 'bg-[#050505]/70 backdrop-blur-xl border-b border-white/[0.06] shadow-lg shadow-black/20'
           : 'bg-transparent'
       }`}
     >
@@ -27,7 +27,7 @@ const Navbar = () => {
         <div className="flex items-center justify-between">
           <Link
             href="#home"
-            className="text-xl font-bold text-black dark:text-white hover:text-zinc-600 dark:hover:text-zinc-300 transition-colors"
+            className="text-xl font-bold text-foreground hover:text-accent transition-colors"
           >
             JH
           </Link>
@@ -35,13 +35,13 @@ const Navbar = () => {
           <div className="flex gap-8">
             <Link
               href="#about"
-              className="text-sm font-medium text-black dark:text-white hover:text-zinc-600 dark:hover:text-zinc-300 transition-colors"
+              className="text-sm font-medium text-zinc-400 hover:text-accent transition-colors"
             >
               About
             </Link>
             <Link
               href="#resume"
-              className="text-sm font-medium text-black dark:text-white hover:text-zinc-600 dark:hover:text-zinc-300 transition-colors"
+              className="text-sm font-medium text-zinc-400 hover:text-accent transition-colors"
             >
               Resume
             </Link>

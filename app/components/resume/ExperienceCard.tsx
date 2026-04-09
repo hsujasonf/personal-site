@@ -21,13 +21,13 @@ const ExperienceCard = ({ experience, onClick }: ExperienceCardProps) => {
           />
         </div>
         <div className="flex-1">
-          <h4 className="text-xl font-bold text-black dark:text-white mb-1">
+          <h4 className="text-xl font-bold text-foreground mb-1">
             {experience.title}
           </h4>
-          <p className="text-lg font-semibold text-zinc-700 dark:text-zinc-300">
+          <p className="text-lg font-semibold text-zinc-400">
             {experience.company}
           </p>
-          <p className="text-sm text-zinc-500 dark:text-zinc-500 mt-1">
+          <p className="text-sm text-zinc-600 mt-1">
             {experience.period}
           </p>
         </div>

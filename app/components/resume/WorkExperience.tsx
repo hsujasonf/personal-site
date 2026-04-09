@@ -27,9 +27,9 @@ const WorkExperience = () => {
   return (
     <>
       <div className="mb-12">
-        <h3 className="text-2xl font-bold text-black dark:text-white mb-8">
+        <h3 className="text-2xl font-bold text-foreground mb-8">
           {t.experience.title}
-          <span className="text-sm font-normal text-zinc-500 dark:text-zinc-400 ml-3">
+          <span className="text-sm font-normal text-zinc-600 ml-3">
             {t.clickToExpand}
           </span>
         </h3>

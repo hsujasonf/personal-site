@@ -1,15 +1,15 @@
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
-import About from "./components/About";
 import Resume from "./components/Resume";
 
 const Home = () => {
   return (
-    <div className="min-h-screen bg-background text-foreground">
-      <Navbar />
+    <div className="bg-background text-foreground">
       <main>
-        <Hero />
-        <About />
+        <div className="relative">
+          <Hero />
+          <Navbar />
+        </div>
         <Resume />
       </main>
     </div>

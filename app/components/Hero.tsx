@@ -2,35 +2,28 @@
 
 import styles from './styles/shared.module.css';
 import { useHeroTranslations } from '@/lib/i18n';
+import { useAboutTranslations } from '@/lib/i18n';
 
 const Hero = () => {
   const t = useHeroTranslations();
+  const about = useAboutTranslations();
 
   return (
     <section
       id="home"
-      className="min-h-screen flex items-center justify-center px-6 py-20"
+      className="min-h-screen flex flex-col px-6 py-8"
     >
-      <div className="max-w-4xl mx-auto text-center">
-        <div className="relative">
-          <div className="absolute inset-0 -z-10 blur-[100px] opacity-30 bg-gradient-to-r from-cyan-500 to-teal-500 rounded-full scale-75" />
-          <h1
-            className={`text-6xl md:text-8xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-white via-cyan-200 to-cyan-400 mb-6 animate-fade-in ${styles.headerWithOutline}`}
-            style={{ backgroundSize: '200% 200%', animation: 'gradient-shift 6s ease infinite, fade-in 0.3s ease-out' }}
-          >
-            {t.name}
-          </h1>
-        </div>
-        <p className="text-xl md:text-2xl text-zinc-500 mb-8">
-          {t.tagline}
-        </p>
-        <div className="flex gap-4 justify-center">
-          <a href="#about" className={styles.buttonPrimary}>
-            {t.buttons.learnMore}
-          </a>
-          <a href="#resume" className={styles.buttonSecondary}>
-            {t.buttons.viewResume}
-          </a>
+      <h1
+        className={`text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-white via-cyan-200 to-cyan-400 animate-fade-in ${styles.headerWithOutline}`}
+      >
+        {t.name}
+      </h1>
+
+      <div className="flex-1 flex items-center pb-16">
+        <div className="max-w-md space-y-5 text-base text-zinc-400">
+          {about.paragraphs.map((paragraph, index) => (
+            <p key={index}>{paragraph}</p>
+          ))}
         </div>
       </div>
     </section>

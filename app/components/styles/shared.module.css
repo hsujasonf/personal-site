@@ -88,19 +88,19 @@
 
 /* Skill tags — terminal/code aesthetic */
 .skillTag {
-  @apply px-3 py-1.5 rounded-md text-xs;
+  @apply px-2 py-1 rounded-md text-[10px];
   font-family: var(--font-geist-mono), monospace;
 }
 
 .skillTagPrimary {
-  @apply px-3 py-1.5 rounded-md text-xs font-semibold;
+  @apply px-2 py-1 rounded-md text-[10px] font-semibold;
   font-family: var(--font-geist-mono), monospace;
   background: var(--accent);
   color: #050505;
 }
 
 .skillTagSecondary {
-  @apply px-3 py-1.5 rounded-md text-xs font-medium;
+  @apply px-2 py-1 rounded-md text-[10px] font-medium;
   font-family: var(--font-geist-mono), monospace;
   background: rgba(34, 211, 238, 0.1);
   color: var(--accent);
@@ -108,7 +108,7 @@
 }
 
 .skillTagOutline {
-  @apply px-3 py-1.5 rounded-md text-xs font-medium;
+  @apply px-2 py-1 rounded-md text-[10px] font-medium;
   font-family: var(--font-geist-mono), monospace;
   border: 1px solid var(--surface-border);
   color: rgb(161, 161, 170); /* zinc-400 */

@@ -8,52 +8,47 @@ const TechnicalSkills = () => {
   const additionalSkills = t.skills.additionalSkills.items;
 
   return (
-    <div className="mb-12">
-      <h3 className="text-2xl font-bold text-foreground mb-6">
+    <div className="space-y-4">
+      <h3 className="text-xs font-bold text-foreground uppercase tracking-wider">
         {t.skills.title}
       </h3>
 
-      <div className="grid md:grid-cols-3 gap-6">
-        {/* Core Skills */}
-        <div className={`${styles.card} p-6`}>
-          <h4 className="text-xs font-bold tracking-wider text-zinc-500 mb-4 uppercase">
-            {t.skills.coreSkills.title}
-          </h4>
-          <div className="flex flex-wrap gap-2">
-            {coreSkills.map((skill, index) => (
-              <span key={index} className={styles.skillTagPrimary}>
-                {skill}
-              </span>
-            ))}
-          </div>
+      <div>
+        <h4 className="text-[10px] text-zinc-500 mb-1.5 uppercase tracking-wider">
+          {t.skills.coreSkills.title}
+        </h4>
+        <div className="flex flex-wrap gap-1">
+          {coreSkills.map((skill, index) => (
+            <span key={index} className={styles.skillTagPrimary}>
+              {skill}
+            </span>
+          ))}
         </div>
+      </div>
 
-        {/* Mobile Skills */}
-        <div className={`${styles.card} p-6`}>
-          <h4 className="text-xs font-bold tracking-wider text-zinc-500 mb-4 uppercase">
-            {t.skills.mobileSkills.title}
-          </h4>
-          <div className="flex flex-wrap gap-2">
-            {mobileSkills.map((skill, index) => (
-              <span key={index} className={styles.skillTagSecondary}>
-                {skill}
-              </span>
-            ))}
-          </div>
+      <div>
+        <h4 className="text-[10px] text-zinc-500 mb-1.5 uppercase tracking-wider">
+          {t.skills.mobileSkills.title}
+        </h4>
+        <div className="flex flex-wrap gap-1">
+          {mobileSkills.map((skill, index) => (
+            <span key={index} className={styles.skillTagSecondary}>
+              {skill}
+            </span>
+          ))}
         </div>
+      </div>
 
-        {/* Additional Skills */}
-        <div className={`${styles.card} p-6`}>
-          <h4 className="text-xs font-bold tracking-wider text-zinc-500 mb-4 uppercase">
-            {t.skills.additionalSkills.title}
-          </h4>
-          <div className="flex flex-wrap gap-2">
-            {additionalSkills.map((skill, index) => (
-              <span key={index} className={styles.skillTagOutline}>
-                {skill}
-              </span>
-            ))}
-          </div>
+      <div>
+        <h4 className="text-[10px] text-zinc-500 mb-1.5 uppercase tracking-wider">
+          {t.skills.additionalSkills.title}
+        </h4>
+        <div className="flex flex-wrap gap-1">
+          {additionalSkills.map((skill, index) => (
+            <span key={index} className={styles.skillTagOutline}>
+              {skill}
+            </span>
+          ))}
         </div>
       </div>
     </div>

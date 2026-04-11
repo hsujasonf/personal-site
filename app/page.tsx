@@ -1,16 +1,12 @@
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
-import Resume from "./components/Resume";
 
 const Home = () => {
   return (
-    <div className="bg-background text-foreground">
-      <main>
-        <div className="relative">
-          <Hero />
-          <Navbar />
-        </div>
-        <Resume />
+    <div className="min-h-screen flex flex-col bg-background text-foreground">
+      <Navbar />
+      <main className="flex-1 flex flex-col">
+        <Hero />
       </main>
     </div>
   );

@@ -1,6 +1,4 @@
-'use client';
-
-const Hero = () => {
+const HomeContent = () => {
   return (
     <section className="flex-1 flex flex-col px-6">
       <div className="flex justify-between items-start -mt-2">
@@ -58,4 +56,4 @@ const Hero = () => {
   );
 };
 
-export default Hero;
+export default HomeContent;
